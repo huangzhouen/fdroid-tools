@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>搜索 - <data:blog.title/></title>
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Custom Search Engine -->
+  <script src="https://cse.google.com/cse.js?cx=YOUR_CSE_ID_HERE"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="site-title"><a href="/">博客标题</a></h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="/">首页</a></li>
+            <li><a href="/p/about.html">关于</a></li>
+            <li><a href="/p/contact.html">联系</a></li>
+            <li><a href="/search">搜索</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      <h2 style="margin-bottom: 1.5rem;">🔍 全网搜索</h2>
+      
+      <!-- Google CSE -->
+      <div class="gcse-search"></div>
+      
+      <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--border-color);">
+      
+      <h3 style="margin-bottom: 1rem;">博客内搜索</h3>
+      <form action="/search" method="get" class="search-box" style="max-width: 100%;">
+        <input class="search-input" name="q" placeholder="在博客中搜索..." type="text" style="border-radius: var(--radius) 0 0 var(--radius);">
+        <button class="search-btn" type="submit" style="border-radius: 0 var(--radius) var(--radius) 0;">搜索</button>
+      </form>
+      
+      <p style="margin-top: 1rem; color: var(--text-muted); font-size: 0.875rem;">
+        💡 <strong>博客内搜索</strong>仅搜索本站文章<br>
+        🔗 <strong>全网搜索</strong>使用 Google 搜索互联网上的相关内容
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="currentYear"></span> 博客标题 | 支持联网搜索</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

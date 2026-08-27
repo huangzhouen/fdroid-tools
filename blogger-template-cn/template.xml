@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+  <meta charset='UTF-8'/>
+  <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+  <title><data:blog.pageTitle/></title>
+  <meta expr:content='data:blog.metaDescription' name='description'/>
+  
+  <!-- Google Custom Search Engine -->
+  <script src='https://cse.google.com/cse.js?cx=YOUR_CSE_ID_HERE' async='async'></script>
+  
+  <b:skin><![CDATA[
+    /* CSS Variables */
+    :root {
+      --primary-color: #2563eb;
+      --primary-hover: #1d4ed8;
+      --text-color: #1f2937;
+      --text-muted: #6b7280;
+      --bg-color: #ffffff;
+      --bg-secondary: #f9fafb;
+      --border-color: #e5e7eb;
+      --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --radius: 8px;
+    }
+    
+    /* Reset */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-color);
+      line-height: 1.6;
+      background: var(--bg-secondary);
+    }
+    
+    a { color: var(--primary-color); text-decoration: none; }
+    a:hover { color: var(--primary-hover); }
+    
+    /* Header */
+    .site-header {
+      background: var(--bg-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .site-title a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-color);
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    
+    .nav-menu a {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    
+    /* Search Box */
+    .search-section {
+      background: var(--primary-color);
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+    }
+    
+    .search-box {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: var(--radius) 0 0 var(--radius);
+      font-size: 1rem;
+    }
+    
+    .search-btn {
+      padding: 0.75rem 1.5rem;
+      background: var(--primary-hover);
+      color: white;
+      border: none;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    
+    .search-btn:hover { background: #1e40af; }
+    
+    /* Main Layout */
+    .content-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 2rem;
+    }
+    
+    /* Blog Posts */
+    .post-card {
+      background: var(--bg-color);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+    
+    .post-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .post-meta {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+    
+    .post-meta span { margin-right: 1rem; }
+    
+    .post-labels a {
+      background: var(--bg-secondary);
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      font-size: 0.75rem;
+    }
+    
+    .read-more {
+      display: inline-block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    
+    /* Sidebar */
+    .sidebar {
+      background: var(--bg-color);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      height: fit-content;
+    }
+    
+    .sidebar h3 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border-color);
+    }
+    
+    .sidebar ul {
+      list-style: none;
+    }
+    
+    .sidebar li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .sidebar li:last-child { border-bottom: none; }
+    
+    /* Footer */
+    .site-footer {
+      background: var(--text-color);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .blog-pager a {
+      padding: 0.5rem 1rem;
+      background: var(--bg-color);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-color);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow);
+      }
+      
+      .nav-menu.active { display: flex; }
+      
+      .content-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+  ]]></b:skin>
+</head>
+<body>
+  <header class='site-header'>
+    <div class='container'>
+      <div class='header-inner'>
+        <h1 class='site-title'><a expr:href='data:blog.homepageUrl'><data:blog.title/></a></h1>
+        <button aria-label='切换菜单' class='menu-toggle'>☰</button>
+        <nav>
+          <ul class='nav-menu'>
+            <li><a expr:href='data:blog.homepageUrl'>首页</a></li>
+            <li><a href='/p/about.html'>关于</a></li>
+            <li><a href='/p/contact.html'>联系</a></li>
+            <li><a href='/search'>搜索</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Section -->
+  <section class='search-section'>
+    <div class='container'>
+      <form class='search-box' expr:action='data:blog.searchUrl'>
+        <input class='search-input' name='q' placeholder='搜索博客文章...' type='text'/>
+        <button class='search-btn' type='submit'>搜索</button>
+      </form>
+      <p style='color: white; text-align: center; margin-top: 1rem; font-size: 0.875rem;'>
+        或者使用<a href='https://cse.google.com/cse?cx=YOUR_CSE_ID_HERE' style='color: white; text-decoration: underline;'>全网搜索</a>
+      </p>
+    </div>
+  </section>
+
+  <main class='site-main'>
+    <div class='container'>
+      <div class='content-wrapper'>
+        <section class='blog-content'>
+          <b:section id='main' class='main-section' showaddelement='no'>
+            <b:widget id='Blog1' locked='true' title='博客文章' type='Blog'>
+              <b:includable id='main' var='top'>
+                <b:loop values='data:posts' var='post'>
+                  <article class='post-card'>
+                    <h2 class='post-title'>
+                      <a expr:href='data:post.url'><data:post.title/></a>
+                    </h2>
+                    <div class='post-meta'>
+                      <span class='post-date'>📅 <data:post.date/></span>
+                      <span class='post-author'>✍️ <data:post.author/></span>
+                      <b:if cond='data:post.labels'>
+                        <span class='post-labels'>
+                          <b:loop values='data:post.labels' var='label'>
+                            <a expr:href='data:label.url'><data:label.name/></a>
+                          </b:loop>
+                        </span>
+                      </b:if>
+                    </div>
+                    <div class='post-summary'>
+                      <data:post.snippet/>
+                    </div>
+                    <a class='read-more' expr:href='data:post.url'>阅读全文 →</a>
+                  </article>
+                </b:loop>
+                <div class='pagination'>
+                  <b:include name='nextprev'/>
+                </div>
+              </b:includable>
+              <b:includable id='nextprev'>
+                <div class='blog-pager'>
+                  <b:if cond='data:newerPageUrl'>
+                    <a class='blog-pager-newer-link' expr:href='data:newerPageUrl'>← 新文章</a>
+                  </b:if>
+                  <b:if cond='data:olderPageUrl'>
+                    <a class='blog-pager-older-link' expr:href='data:olderPageUrl'>旧文章 →</a>
+                  </b:if>
+                </div>
+              </b:includable>
+            </b:widget>
+          </b:section>
+        </section>
+
+        <aside class='sidebar'>
+          <b:section id='sidebar' class='sidebar-section' showaddelement='yes'>
+            <b:widget id='Profile1' locked='false' title='关于我' type='Profile'/>
+            <b:widget id='Label1' locked='false' title='标签云' type='Label'/>
+            <b:widget id='BlogArchive1' locked='false' title='归档' type='BlogArchive'/>
+          </b:section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class='site-footer'>
+    <div class='container'>
+      <p>© <span id='currentYear'></span> <data:blog.title/> | 支持联网搜索的 Blogger 模板</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navMenu = document.querySelector('.nav-menu');
+      
+      if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+        });
+      }
+      
+      // Update year
+      const yearSpan = document.getElementById('currentYear');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+      
+      // Header shadow on scroll
+      window.addEventListener('scroll', function() {
+        const header = document.querySelector('.site-header');
+        if (window.scrollY > 10) {
+          header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+        } else {
+          header.style.boxShadow = '0 2px 8px rgba(0,0,0,0.1)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
