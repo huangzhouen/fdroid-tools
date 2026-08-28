@@ -1,0 +1,28 @@
+========================================
+   推送到 GitHub 手动操作指南
+========================================
+
+步骤 1: 创建 GitHub 仓库
+-------------------------
+1. 打开浏览器访问: https://github.com/new
+2. 仓库名称: fdroid-tools
+3. 选择 Public 或 Private
+4. 不要勾选 "Add a README file"
+5. 点击 "Create repository"
+6. 复制仓库地址（类似 https://github.com/huangzhouen/fdroid-tools.git）
+
+步骤 2: 运行推送命令
+---------------------
+打开 PowerShell（管理员），运行：
+
+cd "D:\Administrator\Documents\codex"
+git remote add origin https://github.com/huangzhouen/fdroid-tools.git
+git branch -M main
+git push -u origin main
+
+步骤 3: 输入 GitHub 凭证
+-------------------------
+- Username: huangzhouen
+- Password/Token: 你的 GitHub Personal Access Token
+
+========================================

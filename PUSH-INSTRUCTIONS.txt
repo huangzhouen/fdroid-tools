@@ -1,0 +1,33 @@
+﻿========================================
+   PUSH TO GITHUB - INSTRUCTIONS
+========================================
+
+STEP 1: Create GitHub Repository
+---------------------------------
+1. Go to: https://github.com/new
+2. Repository name: fdroid-tools
+3. Choose: Public or Private
+4. UNCHECK "Add a README file"
+5. Click "Create repository"
+6. Copy the URL (https://github.com/huangzhouen/fdroid-tools.git)
+
+STEP 2: Run Push Script
+------------------------
+1. Open folder: D:\Administrator\Documents\codex
+2. Right-click on push-to-github.bat
+3. Select "Run as administrator"
+4. Enter your GitHub credentials when prompted
+
+STEP 3: GitHub Credentials
+---------------------------
+- Username: huangzhouen
+- Password: GitHub Personal Access Token
+
+To create a Token:
+1. Go to: https://github.com/settings/tokens
+2. Click "Generate new token (classic)"
+3. Check "repo" scope
+4. Click "Generate token"
+5. Copy the token (you won't see it again!)
+
+========================================

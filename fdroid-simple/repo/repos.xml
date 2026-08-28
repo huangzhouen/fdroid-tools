@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='utf-8'?>
+<repositories xmlns="http://f-droid.org/xml/delivery">
+  <repo name="Simple F-Droid Repo" url="http://localhost:8000" />
+</repositories>
